@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoPro — Автомобили и Запчасти</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo">AUTO<span>PRO</span></div>
+      <nav>
+        <a href="#" class="nav-link active" data-page="home">Главная</a>
+        <a href="#" class="nav-link" data-page="catalog">Каталог</a>
+        <a href="#" class="nav-link" data-page="parts">Запчасти</a>
+      </nav>
+      <button class="call-btn" data-page="home">+7 (495) 000-00-00</button>
+    </div>
+  </header>
+
+  <div id="curtain"></div>
+
+  <!-- PAGE: HOME -->
+  <div id="page-home" class="page active">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="label">Официальный дилер</p>
+        <h1>Авто и запчасти<br/>в одном месте</h1>
+        <p class="sub">Продажа новых и б/у автомобилей, оригинальные запчасти и аксессуары с доставкой.</p>
+        <div class="hero-btns">
+          <button class="btn-red" data-page="catalog">Смотреть авто</button>
+          <button class="btn-outline" data-page="parts">Найти запчасть</button>
+        </div>
+      </div>
+      <div class="hero-img" id="hero-img">
+  <img src="gelik.png" alt="Mercedes G-Class" style="width:100%; max-width:620px; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.6));" />
+</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-item">
+        <span class="stat-n" data-to="240">0</span>
+        <span class="stat-l">Авто в наличии</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-n" data-to="15000">0</span>
+        <span class="stat-l">Позиций запчастей</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-n" data-to="8">0</span>
+        <span class="stat-l">Лет на рынке</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-n" data-to="12000">0</span>
+        <span class="stat-l">Клиентов</span>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2 class="section-title">Чем можем помочь</h2>
+      <div class="cat-grid">
+        <div class="cat-card" data-page="catalog">
+          <div class="cat-icon">🚗</div>
+          <h3>Продажа авто</h3>
+          <p>Новые и б/у автомобили от ведущих марок</p>
+          <span class="cat-link">Смотреть →</span>
+        </div>
+        <div class="cat-card" data-page="parts">
+          <div class="cat-icon">🔧</div>
+          <h3>Запчасти</h3>
+          <p>Оригинальные и аналоговые запчасти в наличии</p>
+          <span class="cat-link">Смотреть →</span>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🛠️</div>
+          <h3>Сервис</h3>
+          <p>ТО, ремонт, диагностика в собственном СТО</p>
+          <span class="cat-link">Подробнее →</span>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">💳</div>
+          <h3>Кредит / Трейд-ин</h3>
+          <p>Выгодные условия покупки, зачёт вашего авто</p>
+          <span class="cat-link">Подробнее →</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: CATALOG -->
+  <div id="page-catalog" class="page">
+    <section class="page-section">
+      <div class="page-head">
+        <div>
+          <p class="label">Автомобили</p>
+          <h2 class="section-title">Каталог</h2>
+        </div>
+        <div class="filters" id="car-filters">
+          <button class="filter active" data-f="all">Все</button>
+          <button class="filter" data-f="new">Новые</button>
+          <button class="filter" data-f="used">С пробегом</button>
+          <button class="filter" data-f="suv">Внедорожники</button>
+        </div>
+      </div>
+
+      <div class="grid" id="cars-grid">
+
+        <div class="card" data-tag="new">
+          <div class="card-top">
+            <span class="tag green">Новый</span>
+            <span class="card-mark">Toyota</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 130" class="mini-car">
+              <ellipse cx="160" cy="115" rx="140" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M30 88 L44 64 L100 44 L165 38 L220 42 L268 62 L282 82 L284 88Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M100 44 L112 24 L180 18 L216 32 L220 42Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M104 43 L114 25 L162 19 L162 41Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M167 18 L180 18 L216 32 L210 41 L167 41Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="84" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="84" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="84" cy="93" r="5" fill="#c0392b"/>
+              <circle cx="234" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="234" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="234" cy="93" r="5" fill="#c0392b"/>
+              <path d="M278 84 L287 88 L288 95 L278 94Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Camry 2.5</div>
+            <div class="card-specs">2.5л · 200 л.с. · Авт.</div>
+            <div class="card-foot">
+              <span class="price">3 290 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tag="new suv">
+          <div class="card-top">
+            <span class="tag green">Новый</span>
+            <span class="card-mark">Kia</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 140" class="mini-car">
+              <ellipse cx="160" cy="122" rx="145" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M25 96 L38 58 L95 30 L175 22 L248 28 L285 58 L294 84 L296 96Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M95 30 L102 10 L182 4 L240 18 L248 28Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M98 29 L104 11 L164 5 L164 27Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M169 4 L182 4 L240 18 L234 27 L169 27Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="82" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="82" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="82" cy="101" r="5" fill="#c0392b"/>
+              <circle cx="244" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="244" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="244" cy="101" r="5" fill="#c0392b"/>
+              <path d="M290 86 L300 91 L301 100 L290 98Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Sorento 2.5 4WD</div>
+            <div class="card-specs">2.5л · 180 л.с. · Авт. · 4×4</div>
+            <div class="card-foot">
+              <span class="price">4 150 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tag="used">
+          <div class="card-top">
+            <span class="tag orange">С пробегом</span>
+            <span class="card-mark">BMW</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 130" class="mini-car">
+              <ellipse cx="160" cy="115" rx="140" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M30 88 L48 60 L110 40 L168 34 L225 38 L272 60 L282 82 L284 88Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M110 40 L124 20 L184 14 L222 28 L225 38Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M114 39 L126 21 L170 15 L170 37Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M175 14 L184 14 L222 28 L217 37 L175 37Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="86" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="86" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="86" cy="93" r="5" fill="#c0392b"/>
+              <circle cx="236" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="236" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="236" cy="93" r="5" fill="#c0392b"/>
+              <path d="M278 84 L288 88 L289 96 L278 94Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">3 Series 320i</div>
+            <div class="card-specs">2.0л · 184 л.с. · 2022г · 45 000 км</div>
+            <div class="card-foot">
+              <span class="price">3 890 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tag="used suv">
+          <div class="card-top">
+            <span class="tag orange">С пробегом</span>
+            <span class="card-mark">Mercedes</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 140" class="mini-car">
+              <ellipse cx="160" cy="122" rx="145" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M22 96 L36 56 L96 28 L178 20 L252 26 L288 58 L296 86 L298 96Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M96 28 L103 8 L184 2 L244 16 L252 26Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M99 27 L105 9 L166 3 L166 25Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M171 2 L184 2 L244 16 L238 25 L171 25Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="80" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="80" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="80" cy="101" r="5" fill="#c0392b"/>
+              <circle cx="246" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="246" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="246" cy="101" r="5" fill="#c0392b"/>
+              <path d="M292 88 L302 93 L303 102 L292 100Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">GLE 350 4MATIC</div>
+            <div class="card-specs">3.0л · 333 л.с. · 2021г · 60 000 км</div>
+            <div class="card-foot">
+              <span class="price">8 400 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tag="new">
+          <div class="card-top">
+            <span class="tag green">Новый</span>
+            <span class="card-mark">Hyundai</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 130" class="mini-car">
+              <ellipse cx="160" cy="115" rx="140" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M32 88 L46 64 L104 44 L163 38 L222 42 L268 64 L280 84 L282 88Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M104 44 L116 24 L179 18 L218 32 L222 42Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M108 43 L118 25 L165 19 L165 41Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M170 18 L179 18 L218 32 L212 41 L170 41Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="86" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="86" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="86" cy="93" r="5" fill="#c0392b"/>
+              <circle cx="232" cy="93" r="22" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="232" cy="93" r="13" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="232" cy="93" r="5" fill="#c0392b"/>
+              <path d="M277 85 L286 89 L287 97 L277 95Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Elantra 1.6</div>
+            <div class="card-specs">1.6л · 128 л.с. · Авт.</div>
+            <div class="card-foot">
+              <span class="price">2 190 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tag="new suv">
+          <div class="card-top">
+            <span class="tag green">Новый</span>
+            <span class="card-mark">Volkswagen</span>
+          </div>
+          <div class="card-img">
+            <svg viewBox="0 0 320 140" class="mini-car">
+              <ellipse cx="160" cy="122" rx="145" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <path d="M26 96 L40 60 L97 32 L176 24 L250 30 L286 60 L294 86 L296 96Z" fill="#1e1e1e" stroke="#c0392b" stroke-width="0.8"/>
+              <path d="M97 32 L104 12 L180 6 L242 20 L250 30Z" fill="#141414" stroke="#c0392b" stroke-width="0.6"/>
+              <path d="M100 31 L106 13 L166 7 L166 29Z" fill="rgba(192,57,43,0.1)"/>
+              <path d="M171 6 L180 6 L242 20 L236 29 L171 29Z" fill="rgba(192,57,43,0.1)"/>
+              <circle cx="83" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="83" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="83" cy="101" r="5" fill="#c0392b"/>
+              <circle cx="245" cy="101" r="24" fill="#111" stroke="#c0392b" stroke-width="0.9"/>
+              <circle cx="245" cy="101" r="14" fill="#1a1a1a" stroke="#333"/>
+              <circle cx="245" cy="101" r="5" fill="#c0392b"/>
+              <path d="M291 87 L301 92 L302 101 L291 99Z" fill="#c0392b" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="card-name">Tiguan 2.0 TSI</div>
+            <div class="card-specs">2.0л · 150 л.с. · Авт. · 4×4</div>
+            <div class="card-foot">
+              <span class="price">4 890 000 ₽</span>
+              <button class="btn-sm">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="kb-tip" id="kb-tip">Используй <kbd>←</kbd> <kbd>→</kbd> для навигации · <kbd>Enter</kbd> выбрать</p>
+    </section>
+  </div>
+
+  <!-- PAGE: PARTS -->
+  <div id="page-parts" class="page">
+    <section class="page-section">
+      <div class="page-head">
+        <div>
+          <p class="label">Магазин</p>
+          <h2 class="section-title">Запчасти</h2>
+        </div>
+        <div class="search-wrap">
+          <input type="text" id="parts-search" placeholder="Поиск запчасти..." />
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+
+      <div class="filters" id="parts-filters">
+        <button class="filter active" data-f="all">Все</button>
+        <button class="filter" data-f="engine">Двигатель</button>
+        <button class="filter" data-f="brake">Тормоза</button>
+        <button class="filter" data-f="suspension">Подвеска</button>
+        <button class="filter" data-f="body">Кузов</button>
+      </div>
+
+      <div class="parts-grid" id="parts-grid">
+
+        <div class="part-card" data-cat="engine" data-name="масляный фильтр">
+          <div class="part-icon">⚙️</div>
+          <div class="part-info">
+            <span class="part-cat">Двигатель</span>
+            <div class="part-name">Масляный фильтр Mann</div>
+            <div class="part-compat">Toyota, Honda, Kia</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">680 ₽</span>
+            <button class="btn-cart" data-name="Масляный фильтр Mann">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="brake" data-name="тормозные колодки">
+          <div class="part-icon">🔴</div>
+          <div class="part-info">
+            <span class="part-cat">Тормоза</span>
+            <div class="part-name">Колодки Brembo передние</div>
+            <div class="part-compat">BMW, Mercedes, Audi</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">4 200 ₽</span>
+            <button class="btn-cart" data-name="Колодки Brembo">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="suspension" data-name="амортизатор стойка">
+          <div class="part-icon">🔩</div>
+          <div class="part-info">
+            <span class="part-cat">Подвеска</span>
+            <div class="part-name">Амортизатор KYB передний</div>
+            <div class="part-compat">Hyundai, Kia, Daewoo</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">3 150 ₽</span>
+            <button class="btn-cart" data-name="Амортизатор KYB">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="engine" data-name="воздушный фильтр">
+          <div class="part-icon">💨</div>
+          <div class="part-info">
+            <span class="part-cat">Двигатель</span>
+            <div class="part-name">Воздушный фильтр K&N</div>
+            <div class="part-compat">Универсальный</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">1 890 ₽</span>
+            <button class="btn-cart" data-name="Воздушный фильтр K&N">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="body" data-name="бампер решётка">
+          <div class="part-icon">🚘</div>
+          <div class="part-info">
+            <span class="part-cat">Кузов</span>
+            <div class="part-name">Решётка радиатора Toyota Camry</div>
+            <div class="part-compat">Toyota Camry 2021–2024</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">8 500 ₽</span>
+            <button class="btn-cart" data-name="Решётка Toyota Camry">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="brake" data-name="тормозной диск">
+          <div class="part-icon">⭕</div>
+          <div class="part-info">
+            <span class="part-cat">Тормоза</span>
+            <div class="part-name">Диск тормозной Bosch</div>
+            <div class="part-compat">VW, Skoda, Seat</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">2 740 ₽</span>
+            <button class="btn-cart" data-name="Диск тормозной Bosch">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="suspension" data-name="сайлентблок рычаг">
+          <div class="part-icon">🔧</div>
+          <div class="part-info">
+            <span class="part-cat">Подвеска</span>
+            <div class="part-name">Сайлентблок рычага передний</div>
+            <div class="part-compat">Nissan, Infiniti</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">920 ₽</span>
+            <button class="btn-cart" data-name="Сайлентблок Nissan">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="engine" data-name="свеча зажигания">
+          <div class="part-icon">⚡</div>
+          <div class="part-info">
+            <span class="part-cat">Двигатель</span>
+            <div class="part-name">Свечи NGK Iridium (4 шт.)</div>
+            <div class="part-compat">Универсальный</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">3 600 ₽</span>
+            <button class="btn-cart" data-name="Свечи NGK Iridium">В корзину</button>
+          </div>
+        </div>
+
+        <div class="part-card" data-cat="body" data-name="зеркало боковое">
+          <div class="part-icon">🪞</div>
+          <div class="part-info">
+            <span class="part-cat">Кузов</span>
+            <div class="part-name">Зеркало боковое правое</div>
+            <div class="part-compat">Kia Sportage 2020–2022</div>
+          </div>
+          <div class="part-right">
+            <span class="part-price">6 200 ₽</span>
+            <button class="btn-cart" data-name="Зеркало Kia Sportage">В корзину</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cart-bar" id="cart-bar">
+        <span id="cart-label">Корзина: 0 товаров</span>
+        <button class="btn-red" id="cart-clear">Очистить</button>
+      </div>
+
+      <p class="kb-tip">Поиск — просто начни набирать · <kbd>Esc</kbd> сбросить поиск</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
